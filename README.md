@@ -166,7 +166,6 @@ class InitialActivity : AppCompatActivity(), VimosResultCallback {
      
     private val LICENSE_KEY = "ENTER_YOUR_LICENSE_KEY_HERE"
 
-    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_initial)
