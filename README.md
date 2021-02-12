@@ -77,7 +77,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
    
     //REQUIRED
-    implementation 'com.frslabs.android.sdk:vimos:1.0.2' //Vimos SDK Dependency
+    implementation 'com.frslabs.android.sdk:vimos:1.0.0' //Vimos SDK Dependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.10" //Kotlin Dependency
 }
 ```
