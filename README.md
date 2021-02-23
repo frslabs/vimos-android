@@ -232,6 +232,10 @@ Error codes and their meaning are tabulated below
 - `setVimosUrl(String vimosUrl)`   ***(Required)***
   
   Sets the Vimos URL as a `String`
+  
+- `setExitOnPageLoadError(boolean value)`   ***(Optional)***
+  
+  Toggle the ExitOnPageLoadError Flag. If enabled will exit the Vimos SDK when a webview page load error occurs.
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
