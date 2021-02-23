@@ -1,5 +1,5 @@
 # VIMOS ANDROID SDK
-![version](https://img.shields.io/badge/version-v1.0.0-blue)
+![version](https://img.shields.io/badge/version-v1.0.1-blue)
 
 The Vimos Android SDK is a realtime Video KYC solution for Android in **Kotlin**
 
@@ -77,7 +77,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
    
     //REQUIRED
-    implementation 'com.frslabs.android.sdk:vimos:1.0.0' //Vimos SDK Dependency
+    implementation 'com.frslabs.android.sdk:vimos:1.0.1' //Vimos SDK Dependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.10" //Kotlin Dependency
 }
 ```
@@ -134,6 +134,7 @@ public class InitialActivity extends AppCompatActivity implements VimosResultCal
         VimosConfig vimosConfig = new VimosConfig();
         vimosConfig.setLicenseKey(LICENSE_KEY);
         vimosConfig.setVimosUrl("ENTER_VIMOS_URL_HERE");
+        vimosConfig.setExitOnPageLoadError(false);
 
         Vimos vimos = new Vimos(vimosConfig);
         vimos.start(this, this);
@@ -182,6 +183,7 @@ class InitialActivity : AppCompatActivity(), VimosResultCallback {
         val vimosConfig = VimosConfig().apply {
             licenseKey = LICENSE_KEY
             vimosUrl = "ENTER_VIMOS_URL_HERE"
+            exitOnPageLoadError = false
         }
 
         Vimos(vimosConfig).start(this, this)
@@ -219,6 +221,7 @@ Error codes and their meaning are tabulated below
 |ERROR_CODE_INVALID_LICENSE | 1002 | Invalid Vimos SDK License |
 |ERROR_CODE_BACK_BTN_PRESSED | 1010 | Vimos SDK has exited due to back button press |
 |ERROR_CODE_INVALID_CONFIG_URL | 1050 | Invalid Vimos URL provided |
+|ERROR_CODE_PAGE_LOAD_ERROR | 1100 | Webpage loading error |
 
 ## Vimos SDK Parameters
 
